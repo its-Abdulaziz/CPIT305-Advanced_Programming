@@ -50,6 +50,15 @@ public class metadata {
         out.write("File readable? : " + f.canRead() + "\n");
         out.write("File writable? : " + f.canWrite() + "\n");
         out.write("File executable? : " + f.canExecute() + "\n");
+
+        long fileLastModified = f.lastModified();
+        Date date = new Date(fileLastModified);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        String myDate = simpleDateFormat.format(date);
+
+        out.write("last modified : " + myDate + "\n");
+
+ 
         out.write("\n");
     }
 
