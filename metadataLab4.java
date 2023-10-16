@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.Date;
 
-public class metadataLab4 {
+public class metadataLab4 implements Serializable {
 
     private String name;
     private boolean readable;
